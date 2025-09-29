@@ -13,8 +13,8 @@
 #define ENCODER_CPR   2048L   // adjust for your encoder
 
 // -------------------- Motion profile --------------------
-const float PROFILE_SPEED = 5000.0f;   // steps/s
-const float PROFILE_ACCEL = 73000.0f;  // steps/s^2
+const float PROFILE_SPEED = 4000.0f;   // steps/s
+const float PROFILE_ACCEL = 70000.0f;  // steps/s^2
 const long  PROFILE_DIST  = 5000;      // steps (relative move)
 
 // -------------------- Objects --------------------
@@ -53,10 +53,10 @@ void setup() {
 
   csvTimer = 0;
   runTime = 0;
+  delay(10000);
 }
 
 void loop() {
-  delay(10000);
   stepper.run(); // drive motor
 
   if (csvTimer >= SAMPLE_PERIOD_MS) {
