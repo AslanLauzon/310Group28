@@ -9,13 +9,16 @@
 #define ENCODER_PIN_B A1
 
 // -------------------- Mechanics --------------------
-#define STEPS_PER_REV 3200L   // adjust for your motor & microstepping
-#define ENCODER_CPR   2048L   // adjust for your encoder
+#define ENCODER_CPR   2048L   
 
 // -------------------- Motion profile --------------------
-const float PROFILE_SPEED = 4000.0f;   // steps/s
-const float PROFILE_ACCEL = 70000.0f;  // steps/s^2
-const long  PROFILE_DIST  = 5000;      // steps (relative move)
+const float PROFILE_SPEED = 5000.0f;   // steps/s
+const float PROFILE_ACCEL = 74000.0f;  // steps/s^2
+const long  STEPSPERMM  = 42.4;      // steps /mm
+const long GOAL = 50;
+const long  PROFILE_DIST  = - 10600;      // steps (relative move)
+
+
 
 // -------------------- Objects --------------------
 AccelStepper stepper(AccelStepper::DRIVER, STEP_PIN, DIR_PIN);
@@ -58,6 +61,7 @@ void setup() {
 
 void loop() {
   stepper.run(); // drive motor
+
 
   if (csvTimer >= SAMPLE_PERIOD_MS) {
     csvTimer = 0;
