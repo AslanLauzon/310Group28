@@ -12,6 +12,7 @@ args = parser.parse_args()
 ser = serial.Serial(args.port, args.baud, timeout=1)
 time.sleep(2)  # let Arduino reset
 
+
 try:
     with open(args.csvfile, "w", newline="") as f:
         writer = csv.writer(f)
