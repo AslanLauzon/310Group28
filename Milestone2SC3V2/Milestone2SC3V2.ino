@@ -17,9 +17,9 @@
 /* ======================= Motion configuration ===================== */
 const float MAX_SPEED_STEPS_S   = 5000.0f;   // steps/s
 const float ACCEL_STEPS_S2      = 74000.0f;  // steps/s^2
-const long  JOG1_STEPS          = 115L * 40L;
-const long  JOG2_STEPS          = 120L * 40L;
-const uint32_t MOVE_PAUSE_MS    = 277;       // pause between moves
+const long  JOG1_STEPS          = 155L * 40L;
+const long  JOG2_STEPS          = 5L * 40L;
+const uint32_t MOVE_PAUSE_MS    = 554;       // pause between moves
 
 /* ============================ Logging ============================= */
 const uint16_t SAMPLE_PERIOD_MS = 5;         // 5 ms = 200 Hz
@@ -78,6 +78,7 @@ void loop() {
       if (stepper.distanceToGo() == 0) {
         state = RunState::Pause;
         stateTimer = 0;                 // start inter-move pause
+        savedTime = time_ms
       }
       break;
 

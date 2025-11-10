@@ -1,0 +1,7 @@
+time_ms,pos_step,angle_deg,target_step
+time_ms,pos_step,angle_deg,target_step
+5,797,-0.300,-400
+10,793,-0.600,-400
+15,786,-0.900,-400
+20,778,-1.200,-400
+25,769,-1.500,-400

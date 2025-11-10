@@ -19,7 +19,7 @@ def expand(lst: List, n: int, fill):
 
 parser = argparse.ArgumentParser(description="Log serial lines to a CSV file.")
 parser.add_argument("csvfile", nargs="?", default="experiment2.csv", help="output CSV filename")
-parser.add_argument("--port", default="COM7", help="serial port (e.g. COM13 or /dev/ttyUSB0)")
+parser.add_argument("--port", default="COM13", help="serial port (e.g. COM13 or /dev/ttyUSB0)")
 parser.add_argument("--baud", type=int, default=115200, help="baud rate")
 parser.add_argument("--stop-token", default="STOP", help='line that stops logging (default "STOP")')
 parser.add_argument("--append", action="store_true", help="append to CSV instead of overwrite")

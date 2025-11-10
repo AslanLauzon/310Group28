@@ -16,7 +16,7 @@
 const float PROFILE_SPEED  = 5400.0f;   // steps/s
 const float PROFILE_ACCEL  = 74000.0f;  // steps/s^2
 const long  STEPSPERMM     = 40;        // steps/mm
-const long  GOAL           = -120;      // mm
+const long  GOAL           = 145;      // mm
 const long  PROFILE_DIST   = GOAL * STEPSPERMM;  // steps (relative move)
 
 // -------------------- Objects --------------------
@@ -95,7 +95,5 @@ void loop() {
 
 
 
-  // Stop condition if desired
-  // if (stepper.distanceToGo() == 0) { /* no-op or disable driver */ }
 }
 
