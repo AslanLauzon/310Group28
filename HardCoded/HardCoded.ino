@@ -23,7 +23,7 @@ const float PROFILE_SPEED  = 5400.0f;   // Max step rate [steps/s]
 const float PROFILE_ACCEL  = 74000.0f;  // Step acceleration [steps/s^2]
 const long  STEPSPERMM     = 40;        // Conversion: 1 mm motion = 40 steps
 const long  GOAL           = 105;       // Target travel distance [mm]
-const long  PROFILE_DIST   = GOAL * STEPSPERMM;  // Target move in steps
+const long  PROFILE_DIST   = 400;  // Target move in steps
 
 /* ============================================================
    ====================== OBJECT CREATION ======================
